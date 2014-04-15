@@ -10,6 +10,11 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require jquery
-//= require jquery_ujs
-//= require_tree .
+
+//= require ./jquery-1.8.2.js
+//= require ./bootstrap.js
+//= require ./flexslider.js
+//= require ./carousel.js
+//= require ./jquery.cslider.js
+//= require ./slider.js
+//= require ./custom.js
