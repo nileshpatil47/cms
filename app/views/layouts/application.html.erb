@@ -24,6 +24,8 @@
     <%= javascript_include_tag "application" %>
   </head>
   <body>
-    <%= yield %>
+    <%= render 'layouts/header' %>
+        <%= yield %>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
