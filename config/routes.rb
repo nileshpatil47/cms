@@ -9,7 +9,7 @@ Cms::Application.routes.draw do
       get 'about'
     end
   end
-  resources :klass
+  resources :klass, :path => "class"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
