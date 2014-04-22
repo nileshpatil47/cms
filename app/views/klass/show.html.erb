@@ -3,7 +3,7 @@
   <div id="page-title-inner">
     <!-- start: Container -->
     <div class="container">
-      <h2><i class="ico-stats ico-white"></i>Classes</h2>
+      <h2><i class="ico-stats ico-white"></i>Subjects</h2>
     </div>
     <!-- end: Container  -->
   </div>  
@@ -20,13 +20,13 @@
         <!-- start: About Us -->
         <div id="about">
           <div class="title">
-            <h3>Classes</h3>
+            <h3>Subjects</h3>
           </div>
           <div class="row">
             <ul class="nav nav-pills nav-stacked" style="float:left;">
-              <% @klasses.each do |klass| %>
+              <% @klass.subjects.each do |subject| %>
                 <li>
-                  <%= link_to klass.name, klas_path(klass)%>
+                  <%= link_to subject.name, subject_path(subject)%>
                 </li>
               <% end %>
             </ul>

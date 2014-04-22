@@ -1,5 +1,9 @@
 class KlassController < ApplicationController
 	def index
-		@klass = Klass.all
+		@klasses = Klass.all
+	end
+
+	def show
+		@klass = Klass.find(params[:id])
 	end
 end
