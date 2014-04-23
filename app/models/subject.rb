@@ -1,4 +1,5 @@
 class Subject < ActiveRecord::Base
+	versioned
   attr_accessible :title, :name, :klass_id
   belongs_to :klass
   has_many :chapters

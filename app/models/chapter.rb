@@ -1,4 +1,5 @@
 class Chapter < ActiveRecord::Base
+	versioned
   attr_accessible :title, :name, :description, :subject_id
   belongs_to :subject
   has_many :topics
