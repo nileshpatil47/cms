@@ -1,9 +1,9 @@
-<!-- start: Page Title -->
+<!--start: Page Title -->
 <div id="page-title">
   <div id="page-title-inner">
     <!-- start: Container -->
     <div class="container">
-      <h2><i class="ico-stats ico-white"></i>Classes</h2>
+      <h2><i class="ico-stats ico-white"></i>Chapter</h2>
     </div>
     <!-- end: Container  -->
   </div>  
@@ -20,13 +20,13 @@
         <!-- start: About Us -->
         <div id="about">
           <div class="title">
-            <h3>Classes</h3>
+            <h3>Chapter</h3>
           </div>
           <div class="row">
             <ul class="nav nav-pills nav-stacked" style="float:left;">
-              <% @klasses.each do |klass| %>
+              <% @chapter.topics.each do |topic| %>
                 <li>
-                  <%= link_to klass.name, klas_path(klass)%>
+                  <%= link_to topic.name, topic_path(topic)%>
                 </li>
               <% end %>
             </ul>
@@ -44,4 +44,4 @@
   </div>
   <!--end: Container-->
 </div>
-<!-- end: Wrapper  -->
+<!-- end: Wrapper 

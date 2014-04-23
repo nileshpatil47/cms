@@ -11,6 +11,8 @@ Cms::Application.routes.draw do
   end
   resources :klass, :path => "class"
   resources :subject
+  resources :chapter
+  resources :topic
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
