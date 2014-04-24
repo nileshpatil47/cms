@@ -18,3 +18,4 @@
 //= require ./jquery.cslider.js
 //= require ./slider.js
 //= require ./custom.js
+//= require jquery_ujs
