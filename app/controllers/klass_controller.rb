@@ -8,5 +8,7 @@ class KlassController < ApplicationController
 
 	def show
 		@klass = Klass.find(params[:id])
+		add_breadcrumb "class", klass_path
+		add_breadcrumb @klass.name, klas_path(@klass)
 	end
 end
