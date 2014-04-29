@@ -6,7 +6,8 @@
     <div class="row">
       <!--start: Logo -->
       <div class="logo span3">
-        <a class="brand" href="#"><img src="/assets/logo.png" alt="Logo"></a>
+        <%= link_to image_tag('logo.png', :alt => "logo"), root_url, :class => "brand" %>
+        <!-- <a class="brand" href="/"><img src="/assets/logo.png" alt="Logo"></a> -->
       </div>
       <!--end: Logo -->
       <!--start: Navigation -->
@@ -20,7 +21,9 @@
             </a>
             <div class="nav-collapse collapse">
               <ul class="nav">
-                <li class="active"><a href="index-2.html">Home</a></li>
+                <li class="active">
+                  <%= link_to "Home", root_url %>
+                </li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
