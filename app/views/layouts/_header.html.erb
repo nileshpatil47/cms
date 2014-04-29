@@ -38,10 +38,12 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sign In <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                       <li>
-                        <a data-toggle="modal" data-target="#myModal1">Sign up</a>
+                        <%= link_to "Sign up", new_user_registration_path %>
+                       <!--  <a >Sign up</a> -->
                       </li>
                       <li>
-                        <a data-toggle="modal" data-target="#myModal">Sign in</a>
+                        <%= link_to "Sign in", new_user_session_path %>
+                        <!-- <a data-toggle="modal" data-target="#myModal">Sign in</a> -->
                       </li>
                     </ul>
                   </li>
