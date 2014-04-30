@@ -24,10 +24,14 @@
           </div>
           <div class="row">
             <div class="span6"> <%= render_breadcrumbs %> </div>
-            <div class="span2"> <a class="btn btn-mini" href="#tab3" style="float:right;"><i class="mini-ico-pencil"></i></a> </div>
+            <div class="span2">
+              <%= link_to edit_topic_path(@topic), :class => "btn btn-mini", :style => "float:right;" do %>
+                <i class="mini-ico-pencil"></i>
+              <% end %>
+            </div>
           </div>
           <p>
-            <%= @topic.description %>
+            <%= @topic.description.html_safe %>
           </p>
         </div>
         <!-- end: About Us -->
