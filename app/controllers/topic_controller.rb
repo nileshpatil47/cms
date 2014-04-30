@@ -47,4 +47,8 @@ class TopicController < ApplicationController
 	      end
 	    end
 	end
+
+	def history
+		@topic = Topic.find(params[:id])
+	end
 end

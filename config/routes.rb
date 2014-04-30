@@ -16,7 +16,11 @@ Cms::Application.routes.draw do
   resources :klass, :path => "class"
   resources :subject
   resources :chapter
-  resources :topic
+  resources :topic do
+    member do
+      get 'history'
+    end
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
