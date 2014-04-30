@@ -7,8 +7,8 @@ gem 'rails', '3.2.13'
 
 gem 'mysql2'
 gem "breadcrumbs_on_rails"
-gem "vestal_versions"
 gem "ckeditor"
+gem 'paper_trail'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

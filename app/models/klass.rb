@@ -1,5 +1,5 @@
 class Klass < ActiveRecord::Base
-	versioned
+	has_paper_trail
   attr_accessible :title, :name
   has_many :subjects
 end

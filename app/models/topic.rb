@@ -1,5 +1,5 @@
 class Topic < ActiveRecord::Base
-	versioned
+	has_paper_trail
   # attr_accessible :title, :body
   attr_accessible :title, :name, :description, :chapter_id
   belongs_to :chapter

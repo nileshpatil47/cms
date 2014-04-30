@@ -1,5 +1,5 @@
 class Subject < ActiveRecord::Base
-	versioned
+	has_paper_trail
   attr_accessible :title, :name, :klass_id
   belongs_to :klass
   has_many :chapters
