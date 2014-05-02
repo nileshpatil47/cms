@@ -9,6 +9,7 @@ gem 'mysql2'
 gem "breadcrumbs_on_rails"
 gem "ckeditor"
 gem 'paper_trail'
+gem 'acts_as_votable'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
