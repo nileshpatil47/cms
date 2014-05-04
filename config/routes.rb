@@ -1,4 +1,10 @@
 Cms::Application.routes.draw do
+  resources :answers
+
+
+  resources :questions
+
+
   mount Ckeditor::Engine => '/ckeditor'
 
   devise_for :users
