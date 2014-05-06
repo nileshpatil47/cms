@@ -1,15 +1,51 @@
-<p id="notice"><%= notice %></p>
+<!--start: Page Title -->
+<div id="page-title">
+  <div id="page-title-inner">
+    <!-- start: Container -->
+    <div class="container">
+      <h2><i class="ico-stats ico-white"></i>Question</h2>
+    </div>
+    <!-- end: Container  -->
+  </div>  
+</div>
+<!-- end: Page Title -->
 
-<p>
-  <b>Title:</b>
-  <%= @question.title %>
-</p>
-
-<p>
-  <b>Topic:</b>
-  <%= @question.topic_id %>
-</p>
-
-
-<%= link_to 'Edit', edit_question_path(@question) %> |
-<%= link_to 'Back', questions_path %>
+<!--start: Wrapper-->
+<div id="wrapper">
+  <!--start: Container -->
+  <div class="container">
+    <!--start: Row -->
+    <div class="row">
+      <div class="span8">
+        <!-- start: About Us -->
+        <h5>
+        	<%= @question.title %>
+        </h5>
+        <div id="about">
+          <div class="title">
+            <h3>Answers</h3>
+          </div>
+          <div> <%= render_breadcrumbs %> </div>
+          <div class="row">
+            <ul class="nav nav-pills nav-stacked" style="float:left;">
+              <% @question.answers.each do |chapter| %>
+                <li>
+                  <%= link_to chapter.name, chapter_path(chapter)%>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+        <!-- end: About Us -->
+      </div>
+      <div class="span4">
+        <!-- start: Sidebar -->
+        <%= render "klass/sidebar" %>
+        <!-- end: Sidebar -->
+      </div>
+    </div>
+    <!--end: Row-->
+  </div>
+  <!--end: Container-->
+</div>
+<!-- end: Wrapper 
