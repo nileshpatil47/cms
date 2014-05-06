@@ -1,6 +1,8 @@
 <div class="title">
   <h3>Questions</h3>
 </div>
-<p>
-  <%= @topic.description.html_safe %>
-</p>
+<% @topic.questions.each do |question| %>
+	<p>
+	  <%= question.title if !question.title.blank? %>
+	</p>
+<% end %>
