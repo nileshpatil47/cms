@@ -1,10 +1,4 @@
 Cms::Application.routes.draw do
-  resources :answers
-
-
-  resources :questions
-
-
   mount Ckeditor::Engine => '/ckeditor'
 
   devise_for :users
@@ -23,6 +17,18 @@ Cms::Application.routes.draw do
   resources :subject
   resources :chapter
   resources :topic do
+    member do
+      get 'history'
+    end
+  end
+
+  resources :questions do
+    member do
+      get 'history'
+    end
+  end
+
+  resources :answers do
     member do
       get 'history'
     end

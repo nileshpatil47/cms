@@ -17,7 +17,15 @@
     <!--start: Row -->
     <div class="row">
       <div class="span8">
-        <!-- start: About Us -->
+        <div class="title">
+          <h3>Question:</h3>
+          <%= link_to edit_question_path(@question), :class => "btn btn-mini", :style => "float:right;" do %>
+            <i class="mini-ico-pencil"></i>
+          <% end %>
+          <%= link_to history_question_path(@question), :class => "btn btn-mini", :style => "float:right;" do %>
+            <i class="mini-ico-list"></i>
+          <% end %>
+        </div>
         <h5>
         	<%= @question.title %>
         </h5>
@@ -25,18 +33,22 @@
           <div class="title">
             <h3>Answers</h3>
           </div>
-          <div> <%= render_breadcrumbs %> </div>
           <div class="row">
             <ul class="nav nav-pills nav-stacked" style="float:left;">
-              <% @question.answers.each do |chapter| %>
+              <% @question.answers.each do |answer| %>
+                <%= link_to edit_answer_path(answer), :class => "btn btn-mini", :style => "float:right;" do %>
+                  <i class="mini-ico-pencil"></i>
+                <% end %>
+                <%= link_to history_answer_path(answer), :class => "btn btn-mini", :style => "float:right;" do %>
+                  <i class="mini-ico-list"></i>
+                <% end %>
                 <li>
-                  <%= link_to chapter.name, chapter_path(chapter)%>
+                  <%= answer.description %>
                 </li>
               <% end %>
             </ul>
           </div>
         </div>
-        <!-- end: About Us -->
       </div>
       <div class="span4">
         <!-- start: Sidebar -->
