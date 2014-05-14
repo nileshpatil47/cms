@@ -1,4 +1,4 @@
-<%= app_title("Topic History")%>
+<%= app_title("Answer History")%>
 
 <!--start: Wrapper-->
 <div id="wrapper">
@@ -7,14 +7,14 @@
     <!--start: Row -->
     <div class="row">
       <div class="span8">
-      	<% @topic.versions.each_with_index do |version, index| %>
-          <% topic = version.reify %>
+      	<% @answer.versions.each_with_index do |version, index| %>
+          <% answer = version.reify if !version.reify %>
           <div id="about">
             <div class="title">
-              <h3><%= topic.name %></h3>
+              <h3><%= "Version: " << (index + 1).to_s %></h3>
             </div>
             <p>
-              <%= @topic.description.html_safe %>
+              <%= answer.description if answer %>
             </p>
           </div>
         <% end %>
