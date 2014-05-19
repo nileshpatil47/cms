@@ -16,7 +16,7 @@ Cms::Application.routes.draw do
   resources :klass, :path => "class"
   resources :subject
   resources :chapter
-  resources :topic do
+  resources :topics do
     member do
       get 'history'
     end

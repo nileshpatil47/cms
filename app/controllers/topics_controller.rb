@@ -1,4 +1,4 @@
-class TopicController < ApplicationController
+class TopicsController < ApplicationController
 	add_breadcrumb "home", :root_path
 	add_breadcrumb "class", :klass_path
 
@@ -11,7 +11,7 @@ class TopicController < ApplicationController
 	end
 
 	def new
-    @topic = Topic.new
+    @topic = Topic.new(:chapter_id => nil)
 
     respond_to do |format|
       format.html # new.html.erb
