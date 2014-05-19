@@ -4,7 +4,7 @@ class CreateTopics < ActiveRecord::Migration
     	t.string :name
       t.string :title
       t.text :description
-      t.belongs_to :chapter
+      t.belongs_to :chapter, :null => true
       t.timestamps
     end
   end

@@ -11,7 +11,7 @@ class TopicsController < ApplicationController
 	end
 
 	def new
-    @topic = Topic.new(:chapter_id => nil)
+    @topic = Topic.new
 
     respond_to do |format|
       format.html # new.html.erb
